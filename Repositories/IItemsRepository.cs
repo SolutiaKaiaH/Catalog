@@ -7,5 +7,7 @@ namespace Catalog.Repositories{
      public interface IItemsRepository{
         Item GetItem(Guid id);
         IEnumerable<Item> GetItems();
+        //route for creating an item
+        void CreateItem(Item item);
     }
 }

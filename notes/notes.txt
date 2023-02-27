@@ -31,3 +31,12 @@ Dependency Injection
             inject dependcncies
     - REPOSITORY IMPLEMENTS INTERFACE
 
+Data Transfer Object
+    - Client and our Service
+
+CreateItem
+    - you need to make sure you take a name
+        - data annotations! 
+        - otherwise you will get a null
+        -[Required][Range]
+
