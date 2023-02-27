@@ -32,5 +32,17 @@ namespace Catalog.Repositories{
         public void CreateItem(Item item){
            items.Add(item);
         }
+
+        //update item
+        public void UpdateItem(Item item){
+            var index = items.FindIndex(existingItem => existingItem.Id == item.Id);
+            items[index] = item; 
+        }
+
+        //delete item
+        public void DeleteItem(Guid id){
+             var index = items.FindIndex(existingItem => existingItem.Id == id);
+            items.RemoveAt(index); 
+        }
     }
 }

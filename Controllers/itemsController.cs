@@ -58,5 +58,41 @@ namespace Catalog.Controllers{
 
             return CreatedAtAction(nameof(GetItem), new {id = item.Id}, item.AsDto());
         }
+
+        //PUT /items/{id}
+        [HttpPut("{id}")]
+        public ActionResult UpdateItem(Guid id, UpdateItemDto itemDto){
+            //find item
+            var existingItem = repository.GetItem(id);
+
+            if(existingItem is null){
+                return NotFound();
+            }
+
+            //with means we are creating a copy, and modifying with these new values 
+                //this is why records are fun
+            Item updatedItem = existingItem with{
+                Name = itemDto.Name,
+                Price = itemDto.Price
+            };
+
+            repository.UpdateItem(updatedItem);
+
+            return NoContent();
+        }
+
+        //DELETE /items/{id}
+        [HttpDelete("{id}")]
+        public ActionResult DeleteItem(Guid id){
+            var existingItem = repository.GetItem(id);
+
+            if(existingItem is null){
+                return NotFound();
+            }
+
+            repository.DeleteItem(id);
+
+            return NoContent();
+        }
     }
 }
