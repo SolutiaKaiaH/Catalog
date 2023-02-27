@@ -1,0 +1,33 @@
+Run
+    - go to debug and press start debugging
+    - or press F5
+Trust the certificate
+    - dotnet dev-certs https --trust 
+Build
+    - cntrl + shift + b
+
+Controller handles requests from the client 
+
+204 response from swagger
+    - something is not as expected 
+    - the problem was that every time we called our ItemsController
+        we were creating a new List items with all new
+        generated .NewGuid Id's
+
+Dependency Injection
+    - a class that wants to use another class   
+        - this class is a dependancy (depends on that class)
+    - instead of having our Controller create a new instance
+        we want to receive a repository into the controller (inject)
+        and use this. 
+    - Why?
+        - by having our code depend upon abstractions we are decoupling
+            implementations from each other
+        - Code is cleaner, easier to modify and easier to requests
+    - HOW TO CONSTRUCT
+        - using an IServiceProvider
+        - register each dependancy into the provider and it will
+            resolve any dependancies needed and construct and
+            inject dependcncies
+    - REPOSITORY IMPLEMENTS INTERFACE
+
