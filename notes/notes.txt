@@ -101,4 +101,11 @@ Set up secrets
         - will create a space in catalog.csproj
     - create new secrets      
         - dotnet user-secrets set MongoDbSettings:Password __________
-        
+
+Health Checks 
+    - API (Postman) could go down 
+    - Connection between Postman and mongoDB could fail
+
+
+docker stop mongo STOPS OUR CONTAINER WHICH EFFECTIVLY
+JUST STOPS OUR DATABASE 
