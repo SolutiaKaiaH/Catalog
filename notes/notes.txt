@@ -40,3 +40,26 @@ CreateItem
         - otherwise you will get a null
         -[Required][Range]
 
+Adding Persistence
+    - Someone reaches in to grab items
+    - they hit the ItemsController  
+    - ItemController hits InMemItemsRepository 
+
+    - If API stops we want to keep items alive 
+        - Option one is to use files
+        - Option two is to use a DataBase
+            - Relational
+            - No-SQL
+                - MongoDB
+
+Postman
+    - adding our host
+    - click new, then put in whatever the terminal is spitting out
+        for the url https://localhost:5001
+    - then look at where they are stored
+        - /items 
+
+MongoDB Client
+    - used to interface with MongoDB (interact)
+    - we need to inject that dependency to use it in our repository 
+    -  dotnet add package MongoDB.Driver
