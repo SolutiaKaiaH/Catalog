@@ -1,3 +1,4 @@
+Create container
 Run
     - go to debug and press start debugging
     - or press F5
@@ -6,6 +7,18 @@ Trust the certificate
 Build
     - cntrl + shift + b
 
+Docker container
+    - check if running
+        - docker ps 
+    - stop the container        
+        - docker stop mongo 
+    - check our containers
+        - docker volume ls 
+    - remove our container
+        - docker volume rm mongodbdata
+    - create container  
+        - docker run -d --rm --name mongo -p 27017:27017 -v mongodbdata:/data/db -e MONGO_INITTDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=Pass#word1 mongo
+        
 Controller handles requests from the client 
 
 204 response from swagger
@@ -75,7 +88,17 @@ Post in Postman
     - raw, and JSON
 
 Asynchronous programming
-    - when you dont wait for your laundry to be done to start folding
+    - when you don't wait for your laundry to be done to start folding
     - cooking breakfast model 
     - Async all the way     
         - async-> Controller async-> repository async-> database
+
+Secrets Management 
+    - using a user name and password with the rest api and database 
+
+Set up secrets 
+    - dotnet user-secrets init 
+        - will create a space in catalog.csproj
+    - create new secrets      
+        - dotnet user-secrets set MongoDbSettings:Password __________
+        
