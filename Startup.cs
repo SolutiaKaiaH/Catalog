@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Catalog.Repositories;
+using Catalog.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -12,6 +13,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Serializers;
+using MongoDB.Driver;
 
 namespace Catalog
 {
@@ -28,8 +33,18 @@ namespace Catalog
         public void ConfigureServices(IServiceCollection services)
         {
 
+            //tell mongodb client how to serialize the different types, otherwise they aren't nice looking
+            BsonSerializer.RegisterSerializer(new GuidSerializer(BsonType.String));
+            BsonSerializer.RegisterSerializer(new DateTimeOffsetSerializer(BsonType.String));
+
+            services.AddSingleton<IMongoClient>(serviceProvider => {
+                var settings = Configuration.GetSection(nameof(MongoDbSettings)).Get<MongoDbSettings>();
+                return new MongoClient(settings.ConnectionString);
+            });
+
             services.AddControllers();
-            services.AddSingleton<IItemsRepository, InMemItemsRepository>();
+            //use dbdatabase not the IItems!
+            services.AddSingleton<IItemsRepository, MongoDbItemsRepository>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Catalog", Version = "v1" });

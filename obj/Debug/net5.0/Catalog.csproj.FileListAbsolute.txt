@@ -27,3 +27,16 @@ C:\Users\KaiaHansen\OneDrive - Solutia Consulting\Desktop\projects\Catalog\obj\D
 C:\Users\KaiaHansen\OneDrive - Solutia Consulting\Desktop\projects\Catalog\obj\Debug\net5.0\ref\Catalog.dll
 C:\Users\KaiaHansen\OneDrive - Solutia Consulting\Desktop\projects\Catalog\obj\Debug\net5.0\Catalog.pdb
 C:\Users\KaiaHansen\OneDrive - Solutia Consulting\Desktop\projects\Catalog\obj\Debug\net5.0\Catalog.genruntimeconfig.cache
+C:\Users\KaiaHansen\OneDrive - Solutia Consulting\Desktop\projects\Catalog\bin\Debug\net5.0\AWSSDK.Core.dll
+C:\Users\KaiaHansen\OneDrive - Solutia Consulting\Desktop\projects\Catalog\bin\Debug\net5.0\AWSSDK.SecurityToken.dll
+C:\Users\KaiaHansen\OneDrive - Solutia Consulting\Desktop\projects\Catalog\bin\Debug\net5.0\DnsClient.dll
+C:\Users\KaiaHansen\OneDrive - Solutia Consulting\Desktop\projects\Catalog\bin\Debug\net5.0\MongoDB.Bson.dll
+C:\Users\KaiaHansen\OneDrive - Solutia Consulting\Desktop\projects\Catalog\bin\Debug\net5.0\MongoDB.Driver.dll
+C:\Users\KaiaHansen\OneDrive - Solutia Consulting\Desktop\projects\Catalog\bin\Debug\net5.0\MongoDB.Driver.Core.dll
+C:\Users\KaiaHansen\OneDrive - Solutia Consulting\Desktop\projects\Catalog\bin\Debug\net5.0\MongoDB.Libmongocrypt.dll
+C:\Users\KaiaHansen\OneDrive - Solutia Consulting\Desktop\projects\Catalog\bin\Debug\net5.0\SharpCompress.dll
+C:\Users\KaiaHansen\OneDrive - Solutia Consulting\Desktop\projects\Catalog\bin\Debug\net5.0\Snappier.dll
+C:\Users\KaiaHansen\OneDrive - Solutia Consulting\Desktop\projects\Catalog\bin\Debug\net5.0\ZstdSharp.dll
+C:\Users\KaiaHansen\OneDrive - Solutia Consulting\Desktop\projects\Catalog\bin\Debug\net5.0\runtimes\linux\native\libmongocrypt.so
+C:\Users\KaiaHansen\OneDrive - Solutia Consulting\Desktop\projects\Catalog\bin\Debug\net5.0\runtimes\osx\native\libmongocrypt.dylib
+C:\Users\KaiaHansen\OneDrive - Solutia Consulting\Desktop\projects\Catalog\bin\Debug\net5.0\runtimes\win\native\mongocrypt.dll

@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["Dtos"]
+  "cSpell.words": ["Bson", "Dtos"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

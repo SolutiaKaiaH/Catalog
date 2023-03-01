@@ -63,3 +63,13 @@ MongoDB Client
     - used to interface with MongoDB (interact)
     - we need to inject that dependency to use it in our repository 
     -  dotnet add package MongoDB.Driver
+
+Docker Image 
+    - A standalone package of software that includes everything 
+        needed to run an application 
+     - When we run we get a docker container
+
+Post in Postman
+    - go to a post tab
+    - go to body 
+    - raw, and JSON
