@@ -1,17 +1,21 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Catalog.Entities;
 
 namespace Catalog.Repositories{
     //interface for InMemItemsRepository
      public interface IItemsRepository{
-        Item GetItem(Guid id);
-        IEnumerable<Item> GetItems();
+        //<Task> makes sure each methods returns task, now an async methods 
+            //when you get item you wont get it right away you will get a task
+            // and you will get it when it's done
+        Task<Item> GetItemAsync(Guid id);
+        Task<IEnumerable<Item>> GetItemsAsync();
         //route for creating an item
-        void CreateItem(Item item);
+        Task CreateItemAsync(Item item);
         //update item
-        void UpdateItem(Item item);
+        Task UpdateItemAsync(Item item);
         //delete item
-        void DeleteItem(Guid id);
+        Task DeleteItemAsync(Guid id);
     }
 }

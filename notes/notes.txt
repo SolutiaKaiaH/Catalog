@@ -73,3 +73,9 @@ Post in Postman
     - go to a post tab
     - go to body 
     - raw, and JSON
+
+Asynchronous programming
+    - when you dont wait for your laundry to be done to start folding
+    - cooking breakfast model 
+    - Async all the way     
+        - async-> Controller async-> repository async-> database

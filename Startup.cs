@@ -42,7 +42,10 @@ namespace Catalog
                 return new MongoClient(settings.ConnectionString);
             });
 
-            services.AddControllers();
+            //tell it to stop taking away the Async, we want to use it
+            services.AddControllers(options => {
+                options.SuppressAsyncSuffixInActionNames = false;
+            });
             //use dbdatabase not the IItems!
             services.AddSingleton<IItemsRepository, MongoDbItemsRepository>();
             services.AddSwaggerGen(c =>
