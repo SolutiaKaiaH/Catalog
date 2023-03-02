@@ -109,3 +109,8 @@ Health Checks
 
 docker stop mongo STOPS OUR CONTAINER WHICH EFFECTIVLY
 JUST STOPS OUR DATABASE 
+
+How to share API with world
+    - Production environment 
+        - a server somewhere 
+        - place where people can access api 
